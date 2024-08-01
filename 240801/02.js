@@ -21,4 +21,20 @@ function test() {
     console.log(x);
 }
 
-test(); //2. 2
+test(); //2. 2 호이스팅되서,,?
+
+const nameObj  = {
+    name: "yuno",
+    method: function() {
+        const arrow = () => {
+            console.log(`화살표 함수 : ${this.name}`);
+        };
+        function normal() {
+            console.log(`일반 함수 : ${this.name}`);
+        }
+        arrow();
+        normal();
+    }
+};
+
+nameObj.method(); //3.모르겠어요ㅕ..
