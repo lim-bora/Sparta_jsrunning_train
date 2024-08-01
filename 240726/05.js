@@ -18,3 +18,5 @@ let arr2 =  [10, 22, 33]
 // 5의 배수를 찾아 반환하세요
 let result2 = arr2.filter((i)=>i %  5 === 0);
 console.log(result2) //[ 10 ]
+
+

@@ -10,12 +10,17 @@ function getData(url) { //API_URL
 }
 
 async function solution(url) {
+    //시도해보고싶은로직 try,에러발생시 catch
     try {
         const result = await getData(url);
         console.log(result);
     } catch (error) {
         console.log(error);
     }
+    
+    // const result = await getData(url);
+    // console.log(result);
 }
-solution(API_URL), solution(WRONG_URL) 
+solution(API_URL);
+solution(WRONG_URL);
 

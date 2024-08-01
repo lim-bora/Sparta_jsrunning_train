@@ -9,5 +9,10 @@ function getData(url) { //API_URL
         //아닐 경우 실패로 처리
     }, 3000);
 }
-getData(API_URL), getData(WRONG_URL) 
+
+getData(API_URL)
+.then((result) => console.log(result))
+.catch((e) => console.log(e));
+
+// getData(API_URL), getData(WRONG_URL) 
 //각각 성공과 실패에 대한 처리를 코드작성해주세요.

@@ -20,10 +20,22 @@
         },
       };
 
+    //   fetch(API_URL,options)
+    //   .then(response => response.json()) 
+    //   .then(data => { 
+    //     console.log(data);
+
+    //     const imageContainer = document.querySelector('#imageContainer');
+    //     let img = document.createElement('img');
+    //     img.src = data[0].url; 
+    //     imageContainer.appendChild(img);
+    //   })
+    //   .catch(err => console.error(err));
+
       fetch(API_URL,options)
-      .then(response => response.json())
-      .then(data => { 
-        console.log(data);
+      .then(async (response) => {
+        const result = await response.json();
+        console.log(result);
 
         const imageContainer = document.querySelector('#imageContainer');
         let img = document.createElement('img');
@@ -36,3 +48,4 @@
     </script>
   </body>
 </html>
+ 

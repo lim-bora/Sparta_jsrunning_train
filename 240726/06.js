@@ -3,25 +3,36 @@
 //평균이 80점 이상인 학생의 이름만 필터링하여 출력해주세요. 
 //가능하다면 메소드 체이닝으로 풀어주세요
 
+// students.map() //배열
+// students.map().filter() //배열
+// students.map().filter().every(); //불리언 (이후 배열매서드 사용 불가)
+
+
 //1.
 const students = [
-  { name: "이재상", scores: [80, 90] },
-  { name: "김준현", scores: [90, 95] },
-  { name: "정윤오", scores: [75, 70] },
- 
-];
+    { name: "이재상", scores: [80, 90] },
+    { name: "김준현", scores: [90, 95] },
+    { name: "정윤오", scores: [75, 70] },
+  ];
 
-const calc = (scores) => { // 평균점수 계산 함수
-    let total = scores.reduce((total, current)=> total + current, 0); //합계
-    return total / scores.length;  //평균
-};
+// const calc = (scores) => { // 평균점수 계산 함수
+//     let total = scores.reduce((total, current)=> total + current, 0); //합계
+//     return total / scores.length;  //평균
+// };
 
-// 평균이 80점 이상
-const filterScore = students.filter((student) => calc(student.scores) >= 80);
-filterScore.forEach(student => 
-    console.log([student.name])
-);
+// // 평균이 80점 이상
+// const filterScore = students.filter((student) => calc(student.scores) >= 80);
+// filterScore.forEach(student => 
+//     console.log([student.name])
+// );
 
+
+
+const arr = students.filter((student) => {
+    const avg = student.scores.reduce((prev,curr) => prev + curr, 0) / student.scores.length;
+    return avg >= 80;
+}).map((student) => [student.name]);
+console.log(arr);
 
 
 //2.

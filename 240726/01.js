@@ -16,3 +16,5 @@ obj2.d = 4;
 /* 해당값 obj1, obj2의 값을 출력해주세요 */
 console.log(obj1); //{ a: 1, b: 2, c: 3, d: 4 }
 console.log(obj2); //{ a: 1, b: 2, c: 3, d: 4 }
+
+//얕은복사는 참조주소를 가져오는거라서 obj1과 obj2는 같은 객체를 가르키고 있음.
